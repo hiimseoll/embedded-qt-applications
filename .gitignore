@@ -1,0 +1,43 @@
+# Build directories
+build/
+build-*/
+*-build-*/
+
+# CMake & qmake artifacts
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile*
+*.qmake.stash
+
+# Qt Creator user settings & clangd cache
+*.pro.user*
+CMakeLists.txt.user*
+.qtcreator/
+.qtc_clangd/
+
+# Qt generated files (MOC / UIC / RCC)
+moc_*.cpp
+moc_*.h
+ui_*.h
+qrc_*.cpp
+
+# Compiled object files & binaries
+*.o
+*.obj
+*.so
+*.a
+*.exe
+*.app
+AIoTClient
+SensorManSDH
+test1
+qt-vi
+WebCamView
+
+# Runtime SQLite database & snapshots
+*.db
+*.db-journal
+*.jpg
+*.png
+!0710_aiot_control_client/Images/*.png
