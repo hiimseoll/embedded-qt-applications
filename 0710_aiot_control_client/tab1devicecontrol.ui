@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Tab1DeviceControl</class>
+ <widget class="QWidget" name="Tab1DeviceControl">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>393</width>
+    <height>372</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Adwaita Sans</family>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="1,4,1,4">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,2,1">
+       <item>
+        <widget class="QPushButton" name="p_PB_TimerStart">
+         <property name="text">
+          <string>TimerStart</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="p_CB_TimerValue">
+         <item>
+          <property name="text">
+           <string>50</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>100</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>500</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1000</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="p_PB_Quit">
+         <property name="text">
+          <string>Quit</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,1">
+       <item>
+        <widget class="QDial" name="p_dialLed">
+         <property name="maximum">
+          <number>255</number>
+         </property>
+         <property name="wrapping">
+          <bool>true</bool>
+         </property>
+         <property name="notchesVisible">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="p_lcdNumber">
+         <property name="digitCount">
+          <number>2</number>
+         </property>
+         <property name="mode">
+          <enum>QLCDNumber::Mode::Hex</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QProgressBar" name="p_progressBarLed">
+         <property name="maximum">
+          <number>255</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,1">
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QCheckBox" name="p_checkBox_8">
+           <property name="text">
+            <string>8</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="p_checkBox_7">
+           <property name="text">
+            <string>7</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QCheckBox" name="p_checkBox_6">
+           <property name="text">
+            <string>6</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QCheckBox" name="p_checkBox_5">
+           <property name="text">
+            <string>5</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QCheckBox" name="p_checkBox_4">
+           <property name="text">
+            <string>4</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QCheckBox" name="p_checkBox_3">
+           <property name="text">
+            <string>3</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QCheckBox" name="p_checkBox_2">
+           <property name="text">
+            <string>2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QCheckBox" name="p_checkBox_1">
+           <property name="text">
+            <string>1</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="p_lcdNumber_key">
+         <property name="digitCount">
+          <number>2</number>
+         </property>
+         <property name="mode">
+          <enum>QLCDNumber::Mode::Hex</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>p_dialLed</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>p_progressBarLed</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>124</x>
+     <y>193</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>125</x>
+     <y>278</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>p_dialLed</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>p_lcdNumber</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>161</x>
+     <y>174</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>259</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
