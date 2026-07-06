@@ -92,7 +92,11 @@ void Tab1DeviceControl::update_key_lcd_slot(int val){
 
     lcd_data ^= 0x01 << (val - 1);
     ui->p_lcdNumber_key->display(lcd_data);
-    ui->p_dialLed->setValue(lcd_data);
+#if 1
+    emit check_box_sig(lcd_data);
+#else
+    ui->p_dialLed->setValue(lcd_data); // need to check
+#endif
 }
 
 void Tab1DeviceControl::on_p_CB_TimerValue_currentTextChanged(const QString &arg1)
@@ -103,3 +107,10 @@ void Tab1DeviceControl::on_p_CB_TimerValue_currentTextChanged(const QString &arg
     }
 }
 
+LedKeyDev& Tab1DeviceControl::get_LedKeyDev(){
+    return *p_LedKeyDev;
+}
+
+QDial& Tab1DeviceControl::get_dialLed(){
+    return *this->ui->p_dialLed;
+}

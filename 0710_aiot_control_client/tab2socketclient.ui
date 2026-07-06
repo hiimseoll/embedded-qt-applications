@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Tab2SocketClient</class>
+ <widget class="QWidget" name="Tab2SocketClient">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0,0">
+       <item>
+        <widget class="QLabel" name="p_label">
+         <property name="text">
+          <string>수신 데이터</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Orientation::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="p_PB_recvDatClr">
+         <property name="text">
+          <string>수신 삭제</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="p_PB_servConn">
+         <property name="text">
+          <string>서버 연결</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QTextEdit" name="p_TE_recvData"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,7,1">
+       <item>
+        <widget class="QLineEdit" name="p_LE_recvId"/>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="p_LE_sendMsg"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="p_PB_send">
+         <property name="text">
+          <string>송신</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>p_PB_recvDatClr</sender>
+   <signal>clicked()</signal>
+   <receiver>p_TE_recvData</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>263</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>272</x>
+     <y>86</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>p_LE_sendMsg</sender>
+   <signal>returnPressed()</signal>
+   <receiver>p_PB_send</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>272</x>
+     <y>269</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>338</x>
+     <y>275</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

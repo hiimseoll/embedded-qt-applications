@@ -5,6 +5,7 @@
 #include <QTimer>
 #include <QCheckBox>
 #include <QButtonGroup>
+#include <QDial>
 #include "ledkeydev.h"
 
 namespace Ui {
@@ -18,6 +19,8 @@ class Tab1DeviceControl : public QWidget
 public:
     explicit Tab1DeviceControl(QWidget *parent = nullptr);
     ~Tab1DeviceControl();
+    LedKeyDev& get_LedKeyDev();
+    QDial& get_dialLed();
 
 private slots:
     void on_p_PB_TimerStart_clicked(bool checked);
@@ -36,6 +39,9 @@ private:
     QCheckBox** p_QCheckBox;
     QButtonGroup* p_QButtonGroup;
     unsigned char lcd_data;
+
+signals:
+    void check_box_sig(int);
 };
 
 #endif // TAB1DEVICECONTROL_H
