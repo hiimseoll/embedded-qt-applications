@@ -23,9 +23,8 @@ private slots:
     void on_p_PB_servConn_clicked(bool checked);
     void on_p_PB_send_clicked();
     void update_recv_data_slot(QString);
-    void update_myself(int);
+    void send_cmd_via_socket_slot(QString, QString);
     void on_p_LE_recvId_selectionChanged();
-
     void on_p_LE_sendMsg_selectionChanged();
 
 private:
@@ -35,6 +34,7 @@ private:
 
 signals:
     void led_write_sig(int);
+    void tab3_recv_data_sig(QStringList);
 };
 
 #endif // TAB2SOCKETCLIENT_H

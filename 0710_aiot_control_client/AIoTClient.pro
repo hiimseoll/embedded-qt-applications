@@ -14,7 +14,8 @@ SOURCES += \
     mainwidget.cpp \
     socketclient.cpp \
     tab1devicecontrol.cpp \
-    tab2socketclient.cpp
+    tab2socketclient.cpp \
+    tab3controlpanel.cpp
 
 HEADERS += \
     keyboard.h \
@@ -22,15 +23,20 @@ HEADERS += \
     mainwidget.h \
     socketclient.h \
     tab1devicecontrol.h \
-    tab2socketclient.h
+    tab2socketclient.h \
+    tab3controlpanel.h
 
 FORMS += \
     keyboard.ui \
     mainwidget.ui \
     tab1devicecontrol.ui \
-    tab2socketclient.ui
+    tab2socketclient.ui \
+    tab3controlpanel.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    AIoTClient.qrc

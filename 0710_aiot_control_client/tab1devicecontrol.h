@@ -41,7 +41,7 @@ private:
     unsigned char lcd_data;
 
 signals:
-    void check_box_sig(int);
+    void check_box_sig(QString, QString);
 };
 
 #endif // TAB1DEVICECONTROL_H

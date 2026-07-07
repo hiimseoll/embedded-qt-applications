@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Tab3ControlPanel</class>
+ <widget class="QWidget" name="Tab3ControlPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>622</width>
+    <height>433</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>588</width>
+        <height>426</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>541</width>
+        <height>426</height>
+       </size>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>-10</y>
+         <width>541</width>
+         <height>426</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="AIoTClient.qrc">:/images/Images/room1.png</pixmap>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="p_PB_Lamp">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>80</y>
+         <width>71</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="AIoTClient.qrc">
+         <normaloff>:/images/Images/light_off.png</normaloff>
+         <normalon>:/images/Images/light_on.png</normalon>:/images/Images/light_off.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>70</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="p_PB_Plug">
+       <property name="geometry">
+        <rect>
+         <x>460</x>
+         <y>260</y>
+         <width>71</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="AIoTClient.qrc">
+         <normaloff>:/images/Images/plug_off.png</normaloff>
+         <normalon>:/images/Images/plug_on.png</normalon>:/images/Images/plug_off.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>70</width>
+         <height>70</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="AIoTClient.qrc"/>
+ </resources>
+ <connections/>
+</ui>

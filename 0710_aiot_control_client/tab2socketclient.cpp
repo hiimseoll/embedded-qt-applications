@@ -70,13 +70,14 @@ void Tab2SocketClient::update_recv_data_slot(QString str_recv_data){
             emit led_write_sig(led_num);
         }
     }
+    else if((str_list[2].indexOf("LAMP") == 0) || (str_list[2].indexOf("GAS") == 0)){ // indexof 써보기
+        emit tab3_recv_data_sig(str_list);
+    }
 }
 
-void Tab2SocketClient::update_myself(int led_num){
-    QString str = "[SDH_QT]LED@0x";
-    str += QString::number(led_num, 16).toUpper();
+void Tab2SocketClient::send_cmd_via_socket_slot(QString target_id, QString cmd){
 
-    p_SocketClient->socketWriteDataSlot(str);
+    p_SocketClient->socketWriteDataSlot("[" + target_id + "]" + cmd);
 }
 
 void Tab2SocketClient::on_p_LE_recvId_selectionChanged()

@@ -89,11 +89,13 @@ void Tab1DeviceControl::update_check_box_slot(int key_num){
 }
 
 void Tab1DeviceControl::update_key_lcd_slot(int val){
-
+    QString cmd;
     lcd_data ^= 0x01 << (val - 1);
+    cmd = QString::number(lcd_data, 16).toUpper();
+
     ui->p_lcdNumber_key->display(lcd_data);
 #if 1
-    emit check_box_sig(lcd_data);
+    emit check_box_sig("SDH_QT", cmd);
 #else
     ui->p_dialLed->setValue(lcd_data); // need to check
 #endif
