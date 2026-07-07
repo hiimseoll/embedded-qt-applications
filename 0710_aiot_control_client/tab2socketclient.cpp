@@ -75,6 +75,7 @@ void Tab2SocketClient::update_recv_data_slot(QString str_recv_data){
     }
     else if(str_list[2].compare("SENSOR") == 0){
         emit tab4_recv_data_sig(str_list);
+        emit tab5_recv_data_sig(str_list);
     }
 }
 

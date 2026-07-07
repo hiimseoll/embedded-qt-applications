@@ -34,9 +34,9 @@ private:
 
 signals:
     void led_write_sig(int);
-    void tab3_recv_data_sig(QStringList);
-    void tab4_recv_data_sig(QStringList);
-
+    void tab3_recv_data_sig(QStringList&);
+    void tab4_recv_data_sig(QStringList&);
+    void tab5_recv_data_sig(QStringList&);
 };
 
 #endif // TAB2SOCKETCLIENT_H

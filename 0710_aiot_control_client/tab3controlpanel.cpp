@@ -44,7 +44,7 @@ void Tab3ControlPanel::on_p_PB_Plug_clicked(bool checked)
 }
 
 
-void Tab3ControlPanel::tab3_recv_data_slot(QStringList str_list){
+void Tab3ControlPanel::tab3_recv_data_slot(QStringList& str_list){
     if(str_list[2] == "LAMPON"){
         ui->p_PB_Lamp->setChecked(true);
         ui->p_PB_Lamp->setPalette(paletteOn);

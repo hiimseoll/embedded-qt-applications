@@ -77,7 +77,7 @@ void Tab4SensorChart::update_last_date_time(bool flag){
     p_QDateTimeAxis->setRange(first_date_time, last_date_time);
 }
 
-void Tab4SensorChart::tab4_recv_data_slot(QStringList str_list){
+void Tab4SensorChart::tab4_recv_data_slot(QStringList& str_list){
     QDateTime date_time = QDateTime::currentDateTime();
     p_IlluLine->append(date_time.toMSecsSinceEpoch(), str_list[3].toInt());
     p_TempLine->append(date_time.toMSecsSinceEpoch(), str_list[4].toDouble());

@@ -24,7 +24,7 @@ public:
     void update_last_date_time(bool);
 
 private slots:
-    void tab4_recv_data_slot(QStringList);
+    void tab4_recv_data_slot(QStringList&);
 
     void on_p_PB_chartClear_clicked();
 

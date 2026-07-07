@@ -19,14 +19,18 @@ mainWidget::mainWidget(QWidget *parent)
     p_Tab4SensorChart = new Tab4SensorChart(ui->p_tab_4);
     ui->p_tab_4->setLayout(p_Tab4SensorChart->layout());
 
+    p_Tab5SensorDatabase = new Tab5SensorDatabase(ui->p_tab_5);
+    ui->p_tab_5->setLayout(p_Tab5SensorDatabase->layout());
+
     ui->tabWidget->setCurrentIndex(1);
 
 //  connect(p_Tab2SocketClient, SIGNAL(led_write_sig(int)), &p_Tab1DeviceControl->get_LedKeyDev(), SLOT(writeLedDataSlot(int)));
     connect(p_Tab2SocketClient, SIGNAL(led_write_sig(int)), &p_Tab1DeviceControl->get_dialLed(), SLOT(setValue(int)));
     connect(p_Tab1DeviceControl, SIGNAL(check_box_sig(QString, QString)), p_Tab2SocketClient, SLOT(send_cmd_via_socket_slot(QString, QString)));
     connect(p_Tab3ControlPanel, SIGNAL(socket_send_data_sig(QString, QString)), p_Tab2SocketClient, SLOT(send_cmd_via_socket_slot(QString, QString)));
-    connect(p_Tab2SocketClient, SIGNAL(tab3_recv_data_sig(QStringList)), p_Tab3ControlPanel, SLOT(tab3_recv_data_slot(QStringList)));
-    connect(p_Tab2SocketClient, SIGNAL(tab4_recv_data_sig(QStringList)), p_Tab4SensorChart, SLOT(tab4_recv_data_slot(QStringList)));
+    connect(p_Tab2SocketClient, SIGNAL(tab3_recv_data_sig(QStringList&)), p_Tab3ControlPanel, SLOT(tab3_recv_data_slot(QStringList&)));
+    connect(p_Tab2SocketClient, SIGNAL(tab4_recv_data_sig(QStringList&)), p_Tab4SensorChart, SLOT(tab4_recv_data_slot(QStringList&)));
+    connect(p_Tab2SocketClient, SIGNAL(tab5_recv_data_sig(QStringList&)), p_Tab5SensorDatabase, SLOT(tab5_recv_data_slot(QStringList&)));
 }
 
 mainWidget::~mainWidget()

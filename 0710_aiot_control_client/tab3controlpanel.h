@@ -19,7 +19,7 @@ public:
 private slots:
     void on_p_PB_Lamp_clicked(bool checked);
     void on_p_PB_Plug_clicked(bool checked);
-    void tab3_recv_data_slot(QStringList);
+    void tab3_recv_data_slot(QStringList&);
 
 private:
     Ui::Tab3ControlPanel *ui;
