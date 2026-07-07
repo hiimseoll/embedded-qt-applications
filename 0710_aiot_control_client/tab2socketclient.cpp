@@ -73,6 +73,9 @@ void Tab2SocketClient::update_recv_data_slot(QString str_recv_data){
     else if((str_list[2].indexOf("LAMP") == 0) || (str_list[2].indexOf("GAS") == 0)){ // indexof 써보기
         emit tab3_recv_data_sig(str_list);
     }
+    else if(str_list[2].compare("SENSOR") == 0){
+        emit tab4_recv_data_sig(str_list);
+    }
 }
 
 void Tab2SocketClient::send_cmd_via_socket_slot(QString target_id, QString cmd){

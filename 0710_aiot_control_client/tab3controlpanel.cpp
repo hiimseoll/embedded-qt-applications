@@ -21,11 +21,11 @@ Tab3ControlPanel::~Tab3ControlPanel()
 void Tab3ControlPanel::on_p_PB_Lamp_clicked(bool checked)
 {
     if(checked){
-        emit socket_send_data_sig("HM_CON", "LAMPON");
+        emit socket_send_data_sig("SDH_QT", "LAMPON");
         ui->p_PB_Lamp->setChecked(false);
     }
     else{
-        emit socket_send_data_sig("HM_CON", "LAMPOFF");
+        emit socket_send_data_sig("SDH_QT", "LAMPOFF");
         ui->p_PB_Lamp->setChecked(true);
     }
 }
@@ -34,11 +34,11 @@ void Tab3ControlPanel::on_p_PB_Lamp_clicked(bool checked)
 void Tab3ControlPanel::on_p_PB_Plug_clicked(bool checked)
 {
     if(checked){
-        emit socket_send_data_sig("HM_CON", "GASON");
+        emit socket_send_data_sig("SDH_QT", "GASON");
         ui->p_PB_Plug->setChecked(false);
     }
     else{
-        emit socket_send_data_sig("HM_CON", "GASOFF");
+        emit socket_send_data_sig("SDH_QT", "GASOFF");
         ui->p_PB_Plug->setChecked(true);
     }
 }

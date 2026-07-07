@@ -29,7 +29,6 @@ void SocketClient::connectToServerSlot(bool &bFlag)
 
 }
 
-
 void SocketClient::socketReadDataSlot()
 {
     QByteArray byteRecvData;

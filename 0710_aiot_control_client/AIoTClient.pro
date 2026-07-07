@@ -1,5 +1,7 @@
-QT += widgets
-QT += network
+QT += \
+    widgets \
+    network \
+    charts
 
 CONFIG += c++17
 
@@ -15,7 +17,8 @@ SOURCES += \
     socketclient.cpp \
     tab1devicecontrol.cpp \
     tab2socketclient.cpp \
-    tab3controlpanel.cpp
+    tab3controlpanel.cpp \
+    tab4sensorchart.cpp
 
 HEADERS += \
     keyboard.h \
@@ -24,14 +27,16 @@ HEADERS += \
     socketclient.h \
     tab1devicecontrol.h \
     tab2socketclient.h \
-    tab3controlpanel.h
+    tab3controlpanel.h \
+    tab4sensorchart.h
 
 FORMS += \
     keyboard.ui \
     mainwidget.ui \
     tab1devicecontrol.ui \
     tab2socketclient.ui \
-    tab3controlpanel.ui
+    tab3controlpanel.ui \
+    tab4sensorchart.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
