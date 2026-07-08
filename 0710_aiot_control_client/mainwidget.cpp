@@ -22,6 +22,9 @@ mainWidget::mainWidget(QWidget *parent)
     p_Tab5SensorDatabase = new Tab5SensorDatabase(ui->p_tab_5);
     ui->p_tab_5->setLayout(p_Tab5SensorDatabase->layout());
 
+    p_Tab6WebCamera = new Tab6WebCamera(ui->p_tab_6);
+    ui->p_tab_6->setLayout(p_Tab6WebCamera->layout());
+
     ui->tabWidget->setCurrentIndex(1);
 
 //  connect(p_Tab2SocketClient, SIGNAL(led_write_sig(int)), &p_Tab1DeviceControl->get_LedKeyDev(), SLOT(writeLedDataSlot(int)));

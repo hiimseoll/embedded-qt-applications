@@ -7,6 +7,7 @@
 #include "tab3controlpanel.h"
 #include "tab4sensorchart.h"
 #include "tab5sensordatabase.h"
+#include "tab6webcamera.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -29,5 +30,6 @@ private:
     Tab3ControlPanel* p_Tab3ControlPanel;
     Tab4SensorChart* p_Tab4SensorChart;
     Tab5SensorDatabase* p_Tab5SensorDatabase;
+    Tab6WebCamera* p_Tab6WebCamera;
 };
 #endif // MAINWIDGET_H

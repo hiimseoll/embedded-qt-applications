@@ -7,5 +7,9 @@
         <file>Images/plug_on.png</file>
         <file>Images/room.png</file>
         <file>Images/room1.png</file>
+        <file>Images/initDisplay.png</file>
+        <file>Images/initDisplay_1.png</file>
+        <file>Images/initDisplay_2.png</file>
     </qresource>
+
 </RCC>

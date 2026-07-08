@@ -2,7 +2,8 @@ QT += \
     widgets \
     network \
     charts \
-    sql
+    sql	\
+    webenginewidgets
 
 CONFIG += c++17
 
@@ -20,7 +21,8 @@ SOURCES += \
     tab2socketclient.cpp \
     tab3controlpanel.cpp \
     tab4sensorchart.cpp \
-    tab5sensordatabase.cpp
+    tab5sensordatabase.cpp \
+    tab6webcamera.cpp
 
 HEADERS += \
     keyboard.h \
@@ -31,7 +33,8 @@ HEADERS += \
     tab2socketclient.h \
     tab3controlpanel.h \
     tab4sensorchart.h \
-    tab5sensordatabase.h
+    tab5sensordatabase.h \
+    tab6webcamera.h
 
 FORMS += \
     keyboard.ui \
@@ -40,7 +43,8 @@ FORMS += \
     tab2socketclient.ui \
     tab3controlpanel.ui \
     tab4sensorchart.ui \
-    tab5sensordatabase.ui
+    tab5sensordatabase.ui \
+    tab6webcamera.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
