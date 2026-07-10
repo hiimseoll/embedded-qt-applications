@@ -22,7 +22,9 @@ SOURCES += \
     tab3controlpanel.cpp \
     tab4sensorchart.cpp \
     tab5sensordatabase.cpp \
-    tab6webcamera.cpp
+    tab6webcamera.cpp \
+    tab7camopencv.cpp \
+    webcamthread.cpp
 
 HEADERS += \
     keyboard.h \
@@ -34,7 +36,9 @@ HEADERS += \
     tab3controlpanel.h \
     tab4sensorchart.h \
     tab5sensordatabase.h \
-    tab6webcamera.h
+    tab6webcamera.h \
+    tab7camopencv.h \
+    webcamthread.h
 
 FORMS += \
     keyboard.ui \
@@ -44,7 +48,8 @@ FORMS += \
     tab3controlpanel.ui \
     tab4sensorchart.ui \
     tab5sensordatabase.ui \
-    tab6webcamera.ui
+    tab6webcamera.ui \
+    tab7camopencv.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -53,3 +58,14 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     AIoTClient.qrc
+
+#added
+INCLUDEPATH += /usr/include/opencv4
+LIBS += -L/usr/lib64 \
+        -lopencv_videoio \
+        -lopencv_highgui \
+        -lopencv_imgcodecs \
+        -lopencv_imgproc \
+        -lopencv_core
+
+#added
